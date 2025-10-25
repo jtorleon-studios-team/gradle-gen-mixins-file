@@ -88,7 +88,7 @@ public class GenMixinsFileTask extends DefaultTask {
                 .getModule()
                 .getResourceDirs()
                 .add(buildDir
-                  .dir(GenMixinsFileTask.GEN_PATH_JAVA)
+                  .dir(GenMixinsFileTask.GEN_PATH_RESOURCE)
                   .get()
                   .getAsFile()
                 );
