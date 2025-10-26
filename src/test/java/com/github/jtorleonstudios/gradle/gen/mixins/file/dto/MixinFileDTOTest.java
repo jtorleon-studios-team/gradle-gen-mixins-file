@@ -55,7 +55,7 @@ class MixinFileDTOTest {
     );
 
     assertEquals(MixinSideType.CLIENT, result.type());
-    assertEquals("client.foo.client.bar.MyClass", result.mixinName());
+    assertEquals("client.foo.mixins.client.bar.MyClass", result.mixinName());
     assertEquals("com.github.foo.bar.mixins", result.packageOwnerName());
   }
 
@@ -67,7 +67,7 @@ class MixinFileDTOTest {
     );
 
     var ex = assertThrows(GradleException.class, () ->
-      MixinFileDTO.from(MixinSideType.CLIENT, dto)
+      MixinFileDTO.from(MixinSideType.SERVER, dto)
     );
 
     assertTrue(ex.getMessage().contains("Invalid Mixin type"));
