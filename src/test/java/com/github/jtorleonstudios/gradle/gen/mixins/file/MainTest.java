@@ -41,6 +41,7 @@ public class MainTest {
     Path buildFile = rootProjectDir.toPath().resolve("build.gradle");
     Files.write(buildFile, String.format("""
             plugins {
+              id 'java'
               id '%s'
             }
         """, Main.PLUGIN_IDENTIFIER).getBytes());
